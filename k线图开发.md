@@ -13,9 +13,21 @@
 <script src="esl.js"></script>
 ```
 
-```
+```js
 <!--为ECharts准备一个具备大小（宽高）的Dom -->
 <div id="main" style="height:600px; width:1000px;"></div>
+```
+
+```js
+ // 为模块加载器配置echarts的路径，从当前页面链接到echarts.js，定义所需的图表路径
+require.config({
+	paths:{ 
+		'echarts' : './echarts',
+		'echarts/chart/bar' : './echarts',//引入柱状图
+		'echarts/chart/line' : './echarts',//引入折线图
+		'echarts/chart/candlestick' : './echarts',//引入K线图
+	}
+});
 ```
 
 
