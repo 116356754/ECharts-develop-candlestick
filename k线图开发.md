@@ -257,7 +257,6 @@ require(
                       borderColor: '#ef232a',
                       borderColor0: '#14b143'
                   }
-              }
               }, {
               name: 'MA5',
               type: 'line',
