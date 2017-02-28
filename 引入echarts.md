@@ -121,5 +121,17 @@ var option = {
 myChart.setOption(option);
 ```
 
+### 模块化包引入
+
+```js
+<!--从当前页面，引入模块加载器esl.js-->
+<script src="esl.js"></script>
+```
+
+```js
+<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+<div id="main" style="height:400px"></div>
+```
+
 
 
