@@ -246,7 +246,7 @@ require(
           start: 20,
           end: 100
       }],
-      series: [{
+      series: [{//数据部分，驱动图表生成的数据内容数组，数组中每一项为一个系列的选项及数据
               name: 'K线周期图表',
               type: 'candlestick',
               data: data.datas,
@@ -257,17 +257,8 @@ require(
                       borderColor: '#ef232a',
                       borderColor0: '#14b143'
                   }
-              },
-              markArea: {
-                  silent: true,
-                  itemStyle: {
-                      normal: {
-                          color: 'Honeydew'                  
-                      }
-                  },
-                  data: fenduans()
               }
-          }, {
+              }, {
               name: 'MA5',
               type: 'line',
               data: calculateMA(5),
