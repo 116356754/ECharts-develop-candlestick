@@ -4,7 +4,7 @@
 
 ### 效果
 
-![](/assets/K_demo.png)
+![](/assets/K-demo.png)
 
 ### 主要过程
 
