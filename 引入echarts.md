@@ -10,7 +10,7 @@
 
 4. cdn 引入，你可以在[cdnjs](https://cdnjs.com/libraries/echarts)，[npmcdn](https://npmcdn.com/echarts@latest/dist/)或者国内的[bootcdn](http://www.bootcdn.cn/echarts/)上找到 ECharts 的最新版本。
 
-
+## 模块化包引入
 
 
 
