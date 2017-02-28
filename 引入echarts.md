@@ -121,5 +121,9 @@ var option = {
 myChart.setOption(option);
 ```
 
+### 自定义构建echarts单文件
+
+
+
 
 
