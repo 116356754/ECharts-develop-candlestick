@@ -78,5 +78,10 @@ require(
 
 
 
+```js
+<!-- ECharts单文件引入 -->
+<script src="echarts.js"></script>
+```
+
 
 
