@@ -104,8 +104,6 @@ var option = {
         }
     ],
     yAxis : [
-        {
-            type : 'value'
         }
     ],
     series : [
@@ -123,7 +121,5 @@ myChart.setOption(option);
 
 ### 自定义构建echarts单文件
 
-
-
-
+ECharts支持自定义构建echarts文件，我们可以在官网的[Builder](http://echarts.baidu.com/builder.html)页面， 勾选上我们需要的组件和图表类型，以及是否支持IE8和压缩文件，生成一个js文件，引用即可使用。
 
