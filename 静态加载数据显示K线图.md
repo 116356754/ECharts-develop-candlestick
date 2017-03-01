@@ -282,7 +282,8 @@ require(
                       color: function(params) {
                           var colorList;
                           if (data.datas[params.dataIndex][1]>
-                              data.datas[params.dataIndex][0]) {
+                              data.datas[params.dataIndex][0]) 
+                          {
                               colorList = '#ef232a';
                           } else {
                               colorList = '#14b143';
