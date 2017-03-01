@@ -101,8 +101,10 @@ var option = {
         trigger: 'axis',
         formatter: function(params) {
             var res = params[0].name
-            res += '<br/>  开盘 : ' + params[0].data[0] + '  最高 : ' + params[0].data[3];
-            res += '<br/>  收盘 : ' + params[0].data[1] + '  最低 : ' + params[0].data[2];
+            res += '<br/>  开盘 : ' + params[0].data[0] 
+                + '  最高 : ' + params[0].data[3];
+            res += '<br/>  收盘 : ' + params[0].data[1] 
+                + '  最低 : ' + params[0].data[2];
             return res;
         },
         axisPointer: {
