@@ -59,7 +59,7 @@ function calculateMA(id,dayCount) {
 
 /*
 *接收到的客户端数据，解析并计算，重新绘制k线图
-*数据格式如下：
+*数据模型 time open close min max
 *[2010/1/4,3289.75,3243.76,3243.319,3295.279]
 */
 function onMessage(evt)
