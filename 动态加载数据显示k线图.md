@@ -13,5 +13,10 @@
 <script src="echarts.min.js"></script>
 ```
 
+```
+<!--为ECharts准备一个具备大小（宽高）的Dom -->
+<div id="main" style="height:600px; width:1000px;"></div>
+```
+
 
 
