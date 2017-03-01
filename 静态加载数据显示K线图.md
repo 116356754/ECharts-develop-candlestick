@@ -114,11 +114,13 @@ require(
           if(data.datas[i][5] != 0 && tag == 1){
               markLineData.push([{
                   xAxis: idx,
-                  yAxis: data.datas[idx][1]>data.datas[idx][0]?(data.datas[idx][3]).toFixed(2):(data.datas[idx][2]).toFixed(2),
+                  yAxis: data.datas[idx][1]>data.datas[idx][0]?
+                         (data.datas[idx][3]).toFixed(2):(data.datas[idx][2]).toFixed(2),
                   value: vols
               }, {
                   xAxis: i,
-                  yAxis: data.datas[i][1]>data.datas[i][0]?(data.datas[i][3]).toFixed(2):(data.datas[i][2]).toFixed(2)
+                  yAxis: data.datas[i][1]>data.datas[i][0]?
+                         (data.datas[i][3]).toFixed(2):(data.datas[i][2]).toFixed(2)
               }]);
               idx = i; vols = data.datas[i][4]; tag = 2;
           }
@@ -128,11 +130,13 @@ require(
           if(data.datas[i][5] != 0 && tag == 2){
               markLineData.push([{
                   xAxis: idx,
-                  yAxis: data.datas[idx][1]>data.datas[idx][0]?(data.datas[idx][3]).toFixed(2):(data.datas[idx][2]).toFixed(2),
+                  yAxis: data.datas[idx][1]>data.datas[idx][0]?
+                         (data.datas[idx][3]).toFixed(2):(data.datas[idx][2]).toFixed(2),
                   value: (vols/(i-idx+1)).toFixed(2)+' M'
               }, {
                   xAxis: i,
-                  yAxis: data.datas[i][1]>data.datas[i][0]?(data.datas[i][3]).toFixed(2):(data.datas[i][2]).toFixed(2)
+                  yAxis: data.datas[i][1]>data.datas[i][0]?
+                         (data.datas[i][3]).toFixed(2):(data.datas[i][2]).toFixed(2)
               }]);
               idx = i; vols = data.datas[i][4];
           }
