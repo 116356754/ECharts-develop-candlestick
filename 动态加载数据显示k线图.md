@@ -6,3 +6,7 @@
 
 ![](/assets/dynamic-K.png)
 
+### 主要过程
+
+
+
