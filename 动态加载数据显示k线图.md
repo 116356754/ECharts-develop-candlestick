@@ -8,5 +8,10 @@
 
 ### 主要过程
 
+```js
+<!--加载echarts库-->
+<script src="echarts.min.js"></script>
+```
+
 
 
