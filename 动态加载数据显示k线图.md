@@ -72,7 +72,7 @@ function onMessage(evt)
     calculateMA(2,10);
     calculateMA(3,20);
     calculateMA(4,30);
-    myChart.setOption(option);
+    myChart.setOption(option);//重绘K线图
 }            
 
 function onError(evt)
@@ -92,128 +92,128 @@ var myChart = echarts.init(document.getElementById('main'));
 // 指定图表的配置项和数据
 // 数据意义：开盘(open)，收盘(close)，最低(lowest)，最高(highest)
 var option = {
-	animation: false,
-	title: {
-		text: '上证指数',
-		left: 0
-	},
-	tooltip: {
-		trigger: 'axis',
-		formatter: function(params) {
-			var res = params[0].name
-			res += '<br/>  开盘 : ' + params[0].data[0] + '  最高 : ' + params[0].data[3];
-			res += '<br/>  收盘 : ' + params[0].data[1] + '  最低 : ' + params[0].data[2];
-			return res;
-		},
-		axisPointer: {
-			type: 'line',
-			animation: false
-		}
+    animation: false,
+    title: {
+        text: '上证指数',
+        left: 0
+    },
+    tooltip: {
+        trigger: 'axis',
+        formatter: function(params) {
+            var res = params[0].name
+            res += '<br/>  开盘 : ' + params[0].data[0] + '  最高 : ' + params[0].data[3];
+            res += '<br/>  收盘 : ' + params[0].data[1] + '  最低 : ' + params[0].data[2];
+            return res;
+        },
+        axisPointer: {
+            type: 'line',
+            animation: false
+        }
 
-	},
-	legend: {
-		data: ['日K','MA5', 'MA10', 'MA20', 'MA30']
-	},
+    },
+    legend: {
+        data: ['日K','MA5', 'MA10', 'MA20', 'MA30']
+    },
 
-	toolbox: {
-		show : true,
-		feature : {
-			mark : {show: true},
-			dataView : {
-				show: true, 
-				readOnly: true
-			},
-			restore : {show: true},
-			saveAsImage : {show: true}
-		}
-	},
-	grid: {
-		left: '10%',
-		right: '10%',
-		bottom: '15%'
-	},
-	xAxis: {
-		type: 'category',
-		data: [],
-		scale: true,
-		boundaryGap : true,
-		axisLine: { lineStyle: { color: '#8392A5' } ,onZero: false},
-		splitLine: {show: false},
-		splitNumber: 20,
-		min: 'dataMin',
-		max: 'dataMax'
-	},
-	yAxis: {
-		scale: true,
-		axisLine: { lineStyle: { color: '#8392A5' }},
-		splitLine: { show: true }
-	},
-	dataZoom: [
-		{
-			type: 'inside',
-		},
-		{
-			show: true,
-			type: 'slider',
-			y: '90%',
-		}
-	],
-	series: [
-		{
-			name: '日K',
-			type: 'candlestick',
-			data: [],
-			itemStyle: {
-				normal: {
-					color: '#FD1050',
-					color0: '#0CF49B',
-					borderColor: '#FD1050',
-					borderColor0: '#0CF49B'
-				}
-			}
-		 }
-		 ,
-		{
-			name: 'MA5',
-			type: 'line',
-			data: [],
-			smooth: true,
-			lineStyle: {
-				normal: {opacity: 0.5}
-			}
-		}
-		,
-		{
-			name: 'MA10',
-			type: 'line',
-			data: [],
-			smooth: true,
-			lineStyle: {
-				normal: {opacity: 0.5}
-			}
-		},
-		{
-			name: 'MA20',
-			type: 'line',
-			data: [],
-			smooth: true,
-			lineStyle: {
-				normal: {opacity: 0.5}
-			}
-		},
-		{
-			name: 'MA30',
-			type: 'line',
-			data: [],
-			smooth: true,
-			lineStyle: {
-				normal: {opacity: 0.5}
-			}
-		}
-	]
+    toolbox: {
+        show : true,
+        feature : {
+            mark : {show: true},
+            dataView : {
+                show: true, 
+                readOnly: true
+            },
+            restore : {show: true},
+            saveAsImage : {show: true}
+        }
+    },
+    grid: {
+        left: '10%',
+        right: '10%',
+        bottom: '15%'
+    },
+    xAxis: {
+        type: 'category',
+        data: [],
+        scale: true,
+        boundaryGap : true,
+        axisLine: { lineStyle: { color: '#8392A5' } ,onZero: false},
+        splitLine: {show: false},
+        splitNumber: 20,
+        min: 'dataMin',
+        max: 'dataMax'
+    },
+    yAxis: {
+        scale: true,
+        axisLine: { lineStyle: { color: '#8392A5' }},
+        splitLine: { show: true }
+    },
+    dataZoom: [
+        {
+            type: 'inside',
+        },
+        {
+            show: true,
+            type: 'slider',
+            y: '90%',
+        }
+    ],
+    series: [
+        {
+            name: '日K',
+            type: 'candlestick',
+            data: [],
+            itemStyle: {
+                normal: {
+                    color: '#FD1050',
+                    color0: '#0CF49B',
+                    borderColor: '#FD1050',
+                    borderColor0: '#0CF49B'
+                }
+            }
+         }
+         ,
+        {
+            name: 'MA5',
+            type: 'line',
+            data: [],
+            smooth: true,
+            lineStyle: {
+                normal: {opacity: 0.5}
+            }
+        }
+        ,
+        {
+            name: 'MA10',
+            type: 'line',
+            data: [],
+            smooth: true,
+            lineStyle: {
+                normal: {opacity: 0.5}
+            }
+        },
+        {
+            name: 'MA20',
+            type: 'line',
+            data: [],
+            smooth: true,
+            lineStyle: {
+                normal: {opacity: 0.5}
+            }
+        },
+        {
+            name: 'MA30',
+            type: 'line',
+            data: [],
+            smooth: true,
+            lineStyle: {
+                normal: {opacity: 0.5}
+            }
+        }
+    ]
 };
 
-	
+
 myChart.showLoading();
 
 // 使用刚指定的配置项和数据显示图表。
